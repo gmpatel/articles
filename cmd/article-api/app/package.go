@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/articles/service"
+	"github.com/gmpatel/articles/service"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )
