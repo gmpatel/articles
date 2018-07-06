@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/articles"
+	"github.com/gmpatel/articles"
 	"github.com/sirupsen/logrus"
 
-	"github.com/articles/controller"
 	"github.com/gin-gonic/gin"
+	"github.com/gmpatel/articles/controller"
 )
 
 var (

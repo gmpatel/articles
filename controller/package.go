@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
-	"github.com/articles"
-	"github.com/articles/model"
+	"github.com/gmpatel/articles"
+	"github.com/gmpatel/articles/model"
 	"github.com/sirupsen/logrus"
 
 	"github.com/gin-gonic/gin"
