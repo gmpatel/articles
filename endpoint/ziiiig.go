@@ -2,7 +2,6 @@ package endpoint
 
 import (
 	"fmt"
-	"net/http"
 	"time"
 
 	"github.com/gmpatel/articles"
@@ -25,7 +24,7 @@ func setupRouter(repository articles.Repository) *gin.Engine {
 
 	router.POST("/articles",
 		func(context *gin.Context) {
-			controller.PostArticles(context, repository)
+			controller.PostArticle(context, repository)
 		})
 
 	router.GET("/articles",
@@ -38,6 +37,11 @@ func setupRouter(repository articles.Repository) *gin.Engine {
 			controller.GetArticles(context, repository)
 		})
 
+	router.GET("/tag/:tagName/:date",
+		func(context *gin.Context) {
+			controller.GetTags(context, repository)
+		})
+
 	router.GET("/healthz",
 		func(context *gin.Context) {
 			controller.Health(context, repository)
@@ -46,11 +50,6 @@ func setupRouter(repository articles.Repository) *gin.Engine {
 	router.GET("/readiness",
 		func(context *gin.Context) {
 			controller.Ready(context, repository)
-		})
-
-	router.GET("/servertime",
-		func(context *gin.Context) {
-			context.String(http.StatusOK, time.Now().UTC().String())
 		})
 
 	return router

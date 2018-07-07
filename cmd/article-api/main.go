@@ -24,7 +24,7 @@ func main() {
 	application.Action = func(c *cli.Context) error {
 		// Set log level
 		log := setLooger()
-
+		fmt.Println(serviceSettings.ConnString)
 		// Construct our db repository
 		repo, err := repository.NewRepository(serviceSettings.ConnString, serviceSettings.Workers, (serviceSettings.QryTimeout * 1000))
 		if err != nil {

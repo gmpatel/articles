@@ -20,9 +20,9 @@ func DefaultSettings() *Settings {
 func DefaultServiceSettings() *service.Settings {
 	return &service.Settings{
 		ListenPort: 8083,
-		ConnString: "server=localhost; user id=sa; password=gmcm7880; port=1433; database=Articles",
-		QryTimeout: 10,
-		Workers:    5,
+		ConnString: "server=localhost; user id=sa; password=Welcome100; database=Articles",
+		QryTimeout: 30,
+		Workers:    10,
 	}
 }
 
