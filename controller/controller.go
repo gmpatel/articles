@@ -85,7 +85,7 @@ func PostArticle(c *gin.Context, repository articles.Repository) {
 		return
 	}
 
-	id, err := repository.StoreArticle(&ArticleModel)
+	id, date, err := repository.StoreArticle(&ArticleModel)
 	if err != nil {
 		c.JSON(
 			http.StatusInternalServerError, model.ErrorResponse{ErrorMessage: err.Error()},
@@ -95,7 +95,7 @@ func PostArticle(c *gin.Context, repository articles.Repository) {
 
 	c.JSON(
 		http.StatusOK,
-		id,
+		model.ArticleModel{ID: id, Date: *date},
 	)
 }
 

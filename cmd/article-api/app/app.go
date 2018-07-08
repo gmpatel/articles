@@ -20,7 +20,7 @@ func DefaultSettings() *Settings {
 func DefaultServiceSettings() *service.Settings {
 	return &service.Settings{
 		ListenPort: 8083,
-		ConnString: "server=localhost; user id=sa; password=Welcome100; database=Articles",
+		ConnString: "server=mssql.au.ds.network; user id=service_user; password=Welcome100!; port=1433; database=arbitrag_articles", // "server=localhost; user id=sa; password=Welcome100; database=Articles",
 		QryTimeout: 30,
 		Workers:    10,
 	}

@@ -1,3 +1,4 @@
+/*
 USE [Master]
 
 IF db_id('Articles') IS NULL
@@ -7,6 +8,7 @@ END
 GO
 
 USE [Articles]
+*/
 
 IF OBJECT_ID (N'Article', N'U') IS NULL 
 BEGIN
@@ -85,7 +87,7 @@ BEGIN
     END
 
     DROP TABLE #TempTags
-    SELECT @ArticleId [Id]
+    SELECT [Id], CONVERT(VARCHAR(10), CreationDate, 112) FROM Article WHERE [Id] = @ArticleId
 END
 GO
 
@@ -136,25 +138,25 @@ BEGIN
 SELECT 
       PT.Id, PT.Name, 
       Articles = 
-        STUFF (
+        ISNULL(STUFF (
           (
               SELECT ',' + convert(nvarchar(50), CT.Id)
-              FROM [dbo].[Article] CT
+              FROM [DBO].[Article] CT
               WHERE CT.Id in (select ArticleId from ArticleTag ta inner join Article a on ta.ArticleId = a.Id where ta.TagId = PT.Id AND a.CreationDate = Convert(date, @Date))
               ORDER BY CT.Id
               FOR XML PATH(''),TYPE
           ).value('.','VARCHAR(MAX)'),1,1,SPACE(0)
-        ),
+        ), ''),
       RelatedTags = 
-        STUFF (
+        ISNULL(STUFF (
           (
               SELECT ',' + CT.Name
-              FROM [dbo].[Tag] CT
+              FROM [DBO].[Tag] CT
               WHERE CT.Id in (select TagId from ArticleTag where ArticleId IN (select ArticleId from ArticleTag ta inner join Article a on ta.ArticleId = a.Id where ta.TagId = PT.Id AND a.CreationDate = Convert(date, @Date))) AND ltrim(rtrim(lower(CT.Name))) <> ltrim(rtrim(lower(@Tag)))
               ORDER BY CT.Id
               FOR XML PATH(''),TYPE
           ).value('.','VARCHAR(MAX)'),1,1,SPACE(0)
-        )
+        ), '')
     FROM 
       [dbo].[Tag] PT
     WHERE 

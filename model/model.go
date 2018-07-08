@@ -18,11 +18,11 @@ type DefaultError struct {
 // ArticleModel defines the structure of the article API request body
 type ArticleModel struct {
 	ID         int64     `json:"id,omitempty"`
-	Title      string    `json:"title" binding:"required"`
+	Title      string    `json:"title,omitempty" binding:"required"`
 	DateTime   time.Time `json:"-"`
-	Date       string    `json:"date,omitempty"`
-	Body       string    `json:"body" binding:"required"`
-	Tags       []string  `json:"tags" binding:"required"`
+	Date       string    `json:"date,omitempty,omitempty"`
+	Body       string    `json:"body,omitempty" binding:"required"`
+	Tags       []string  `json:"tags,omitempty" binding:"required"`
 	TagsString string    `json:"-"`
 }
 

@@ -57,7 +57,7 @@ func (repo *SQLRepository) stop() {
 }
 
 // StoreArticle stores the given article into the database
-func (repo *SQLRepository) StoreArticle(article *model.ArticleModel) (int64, error) {
+func (repo *SQLRepository) StoreArticle(article *model.ArticleModel) (int64, *string, error) {
 	storedProc := "[dbo].[spPostArticle]"
 	ctx, cancel := context.WithTimeout(context.Background(), repo.timeout)
 	defer cancel()
@@ -68,11 +68,26 @@ func (repo *SQLRepository) StoreArticle(article *model.ArticleModel) (int64, err
 	rows, err := repo.db.QueryContext(ctx, cmd, sql.Named("title", article.Title), sql.Named("body", article.Body), sql.Named("tags", tags))
 	if err != nil {
 		log.Errorf("failed to execute stored procedure '%s': %v", storedProc, err)
-		return 0, err
+		return 0, nil, err
 	}
 
-	ret := getScallerValue(rows)
-	return ret.(int64), err
+	for rows.Next() {
+		article := model.ArticleModel{}
+
+		scanErr := rows.Scan(
+			&article.ID,
+			&article.Date,
+		)
+
+		if scanErr != nil {
+			log.Errorf("Failed to scan row cells: %v", scanErr)
+			return 0, nil, scanErr
+		}
+
+		return article.ID, &article.Date, nil
+	}
+
+	return 0, nil, fmt.Errorf("No post back data found")
 }
 
 // GetArticles stores the given article into the database
