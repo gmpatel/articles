@@ -13,9 +13,8 @@ golang exercise - article api service
 
 #### In MAC terminal window please run the script below to start the service
 
-  cd ~/go/src/github.com/gmpatel/articles/cmd/article-api/
-  go build
-  ./article-api
-  
-**If everything was good and went as per plan, the service should start listening on port 8083
+  cd ~/go/src/github.com/gmpatel/articles/cmd/article-api/  
+  go build  
+  ./article-api  
 
+**If everything was good and went as per plan, the service should start listening on port 8083**  
