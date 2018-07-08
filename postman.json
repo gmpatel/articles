@@ -6,41 +6,20 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8083/readiness",
+			"name": "http://localhost:8083/articles",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8083/readiness",
+					"raw": "http://localhost:8083/articles",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"readiness"
-					]
-				},
-				"description": "Checks the ready status of the service..."
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8083/healthz",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:8083/healthz",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8083",
-					"path": [
-						"healthz"
+						"articles"
 					]
 				},
 				"description": "Checks the ready status of the service..."
@@ -61,27 +40,6 @@
 					"mode": "raw",
 					"raw": "{\r\n  \"title\": \"latest science shows that potato chips are better for you than sugar\",\r\n  \"body\" : \"some text, potentially containing simple markup about how potato chips are great\",\r\n  \"tags\" : [\"health\", \"fitness\", \"science\"]\r\n}"
 				},
-				"url": {
-					"raw": "http://localhost:8083/articles",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8083",
-					"path": [
-						"articles"
-					]
-				},
-				"description": "Checks the ready status of the service..."
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8083/articles",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
 				"url": {
 					"raw": "http://localhost:8083/articles",
 					"protocol": "http",
@@ -136,6 +94,48 @@
 						"tag",
 						"health",
 						"20180707"
+					]
+				},
+				"description": "Checks the ready status of the service..."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/readiness",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8083/readiness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"readiness"
+					]
+				},
+				"description": "Checks the ready status of the service..."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/healthz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8083/healthz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"healthz"
 					]
 				},
 				"description": "Checks the ready status of the service..."
