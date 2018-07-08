@@ -26,7 +26,9 @@ $ ls ~/go/src/github.com/gmpatel/articles/cmd/binaries
 2. article-api-linux  
 3. article-api-linux-arm  
 4. article-api-windows.exe  
-
+  
+To run the service from the binary, just execute the respective binary on the related platform.  
+  
 ## Source code of the solution
 
 ### In the MAC terminal please run the script section below to pull the full source code of the solution
