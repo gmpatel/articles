@@ -54,6 +54,7 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
 2. Run the script **$ cat ~/go/src/github.com/gmpatel/articles/scripts/db/create.sql** against the blank db you just created in step 1 to create the necessary database assets for the service to store data.  
 3. Setup environment variable **APP_CONN_STRING** with the value of the new connection string as per the example given below. 
 
+**Note:** If you are setting up your own connection string, there is a known issue with environment variable setup about not to use some of the special characaters. So please try to keep connection string (especially password) simple without any kind of special characters.
 
 **$ export APP_CONN_STRING="server=localhost; user id=sa; password=welcome123; database=Articles"**  
 
