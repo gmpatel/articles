@@ -72,3 +72,21 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
 3. I would have done **Unit Testing** and **GODOG Acceptance Testing** as well time had permitted.
 4. Even though I have not done **Unit Testing** and **GODOG Acceptance Testing**, I would say I have considerable experience around that part of the solution development.
 
+## Assumptions
+
+### Count field in response json of /tag/{tagName}/{date}
+  
+{  
+    "tag": "health",  
+    "count": 2,  
+    "articles": [  
+        "1",  
+        "2"  
+    ],  
+    "related_tags": [  
+        "fitness",  
+        "science"  
+    ]  
+}  
+
+The count field here doesn't make any sense, I have put it as a count of articles found for the given tag on given date as a part of my solution, but, then that 2 can be counted from the articles[] field of the response json as well. But if that is for the different purpose then it does not clearly reflect what should be brought over there for the count field.
