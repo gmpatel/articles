@@ -71,6 +71,8 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
 2. It wasn't 3/4/5 hours exercies for me for the scale of solution I have written. It took me roughly 12/13 hours to reach at this stage where the solution is at the moment.
 3. I would have done **Unit Testing** and **GODOG Acceptance Testing** as well time had permitted.
 4. Even though I have not done **Unit Testing** and **GODOG Acceptance Testing**, I would say I have considerable experience around that part of the solution development.
+5. I like the **/tag/{tagName}/{date}** endpoint. It was fairly complex to query data, but, really good.
+6. I would have used some other database or could have kept data in memory, buy, then I was wanted to work myself on SQLServer side of Golang so, I took this as an opportunity to code GoLang with SQLServer.
 
 ## Assumptions
 
