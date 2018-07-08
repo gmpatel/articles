@@ -5,8 +5,8 @@ golang exercise - article api service
 
 ### Please run the script below to get the full source code of the solution
 
-mkdir ~/go/src/github.com/gmpatel/  
-cd ~/go/src/github.com/gmpatel/  
-git clone https://github.com/gmpatel/articles.git
+  mkdir ~/go/src/github.com/gmpatel/  
+  cd ~/go/src/github.com/gmpatel/  
+  git clone https://github.com/gmpatel/articles.git
 
 test
