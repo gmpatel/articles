@@ -17,4 +17,6 @@ golang exercise - article api service
   go build  
   ./article-api  
 
-**If everything was good and went as per plan, the service should start listening on port 8083**  
+The service should start listening on port 8083 (expecting everything went well)  
+
+
