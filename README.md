@@ -18,6 +18,15 @@ Host: {server}:{port}
 **GET /tag/{tagName}/{date}** HTTP/1.1  
 Host: {server}:{port}  
 
+## Binaries included
+  
+$ ls ~/go/src/github.com/gmpatel/articles/cmd/binaries  
+  
+1. article-api-mac  
+2. article-api-linux  
+3. article-api-linux-arm  
+4. article-api-windows.exe  
+
 ## Source code of the solution
 
 ### In the MAC terminal please run the script section below to pull the full source code of the solution
