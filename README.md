@@ -26,7 +26,7 @@ $ mkdir ~/go/src/github.com/gmpatel/
 $ cd ~/go/src/github.com/gmpatel/  
 $ git clone https://github.com/gmpatel/articles.git
   
-## Setup the service
+## Setup/build/run the service
 
 ### In MAC terminal please run the script below to start the service
 
@@ -40,7 +40,7 @@ There is a **postman.json** file included in the source code for you to hit the 
 
 $ cat ~/go/src/github.com/gmpatel/articles/postman.json  
 
-## Setup database  
+## Setup the database  
 
 For the ease of the demonstration, the service connects to my SQL Server Database in cloud by default.  
   
