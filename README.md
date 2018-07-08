@@ -7,9 +7,6 @@ golang exercise - article api service
 
 mkdir ~/go/src/github.com/gmpatel/  
 cd ~/go/src/github.com/gmpatel/  
-git clone https://github.com/gmpatel/articles.git  
-behaviour: ajax changes not saved
+git clone https://github.com/gmpatel/articles.git
 
-
-
-
+test
