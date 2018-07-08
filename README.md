@@ -1,22 +1,22 @@
 # Articles - article api service
-
-**POST /articles** HTTP/1.1
-Host: {server}:{port}
-Content-Type: application/json
-{
-  "title": "latest science shows that potato chips are better for you than sugar",
-  "body" : "some text, potentially containing simple markup about how potato chips are great",
-  "tags" : ["health", "fitness", "science"]
-}
-
-**GET /articles** HTTP/1.1
-Host: {server}:{port}
-
-**GET /articles/{id}** HTTP/1.1
-Host: {server}:{port}
-
-**GET /tag/{tagName}/{date}** HTTP/1.1
-Host: {server}:{port}
+  
+**POST /articles** HTTP/1.1  
+Host: {server}:{port}  
+Content-Type: application/json  
+{  
+  "title": "latest science shows that potato chips are better for you than sugar",  
+  "body" : "some text, potentially containing simple markup about how potato chips are great",  
+  "tags" : ["health", "fitness", "science"]  
+}  
+  
+**GET /articles** HTTP/1.1  
+Host: {server}:{port}  
+  
+**GET /articles/{id}** HTTP/1.1  
+Host: {server}:{port}  
+  
+**GET /tag/{tagName}/{date}** HTTP/1.1  
+Host: {server}:{port}  
 
 ## Source code of the solution
 
