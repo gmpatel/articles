@@ -3,7 +3,7 @@ golang exercise - article api service
 
 ## Source code of the solution
 
-### Please run the script section below to pull the full source code of the solution
+### In the MAC terminal please run the script section below to pull the full source code of the solution
 
 $ mkdir ~/go/src/github.com/gmpatel/  
 $ cd ~/go/src/github.com/gmpatel/  
@@ -11,7 +11,7 @@ $ git clone https://github.com/gmpatel/articles.git
   
 ## Setup the service
 
-### In MAC terminal window please run the script below to start the service
+### In MAC terminal please run the script below to start the service
 
 $ cd ~/go/src/github.com/gmpatel/articles/cmd/article-api/  
 $ go build  
@@ -47,3 +47,11 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
 1. Setup the environment variable **APP_LISTEN_PORT** with the value of the new port you want service to listen on, as per the example given below.  
 
 **$ export APP_LISTEN_PORT=8088**  
+
+## Feedback about the coding test
+
+1. It was really good exercies to do in golang.
+2. It wasn't 3/4/5 hours exercies for me for the scale of solution I have written. It took me roughly 12/13 hours to reach at this stage where the solution is at the moment.
+3. I would have done **Unit Testing** and **GODOG Acceptance Testing** as well time had permitted.
+4. Even though I have not done **Unit Testing** and **GODOG Acceptance Testing**, I would say I have considerable experience around that part of the solution development.
+
