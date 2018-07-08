@@ -46,7 +46,7 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
   
 **DefConnStr**: "server=mssqlserver; user id=my-user; password=mypasswd; database=prefix_articles"  
 
-## Override conection string  
+## Override connection string  
 
 **You can override the default connection string by setting up the environment variable for the connection string.**  
 
