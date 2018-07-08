@@ -29,12 +29,19 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
   
 **DefConnStr**: "server=mssqlserver; user id=my-user; password=mypasswd; database=prefix_articles"  
 
-##### Steps to setup new connections string  
+### Overrides  
 
-You can override the connection string by setting up the environment variable for the connection string.  
+You can override the default connection string by setting up the environment variable for the connection string.  
 
 1. Create new blank database **i.e Articles** into your local OR intranet sqlserver.  
 2. Run the script **$ cat ~/go/src/github.com/gmpatel/articles/scripts/db/create.sql** against the blank db you just created in step 1 to create the necessary database assets for the service to store data.  
 3. Setup environment variable **APP_CONN_STRING** with the value of the new connection string as per the example given below.  
-
 **export APP_CONN_STRING="server=localhost; user id=sa; password=welcome123; database=Articles"**  
+
+You can also override the default port service is listening on by setting the environment variable for the port to listen on.
+
+1. Setup the environment variable **APP_LISTEN_PORT** with the value of the new port you want service to listen on, as per the example given below.
+
+**export APP_LISTEN_PORT=8088**  
+
+
