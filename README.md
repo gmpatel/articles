@@ -1,4 +1,4 @@
-# Articles - article api service
+# Articles - article api service (golang | go)
   
 **POST /articles** HTTP/1.1  
 Host: {server}:{port}  
