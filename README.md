@@ -53,7 +53,7 @@ $ cat ~/go/src/github.com/gmpatel/articles/postman.json
 
 ## Setup the database  
 
-For the ease of the demonstration, the service connects to my SQL Server Database in cloud by default.  
+For the ease of the demonstration, the service connects to my SQL Server Database in cloud by default. **Please note that if you are using my default DB created up in the cloud it stored USA date which is one day behind of Australia.**  
   
 **DefConnStr**: "server=mssqlserver; user id=my-user; password=mypasswd; database=prefix_articles"  
 
