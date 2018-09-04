@@ -104,3 +104,9 @@ For the ease of the demonstration, the service connects to my SQL Server Databas
 }  
 
 The count field here doesn't make any sense, I have put it as a count of articles found for the given tag on given date as a part of my solution, but, then that 2 can be counted from the articles[] field of the response json as well. But if that is for the different purpose then it does not clearly reflect what should be brought over there for the count field.
+
+## Commands
+
+### Check unit test coverage on go project repo
+
+clear && go test $(go list ./... | grep -v acceptance) -coverprofile=coverage.out -cover && go tool cover -func coverage.out
